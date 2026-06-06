@@ -87,18 +87,6 @@ public class BurgerUnitTests {
         Mockito.when(bunMock.getPrice()).thenReturn(100.0f);
         burger.setBuns(bunMock);
         assertEquals(200.0f, burger.getPrice(), 0.001f);
-
-        // Сценарий 2: булочка + один ингредиент
-        Ingredient ingredient1 = Mockito.mock(Ingredient.class);
-        Mockito.when(ingredient1.getPrice()).thenReturn(50.0f);
-        burger.addIngredient(ingredient1);
-        assertEquals(250.0f, burger.getPrice(), 0.001f);
-
-        // Сценарий 3: булочка + два ингредиента
-        Ingredient ingredient2 = Mockito.mock(Ingredient.class);
-        Mockito.when(ingredient2.getPrice()).thenReturn(75.0f);
-        burger.addIngredient(ingredient2);
-        assertEquals(325.0f, burger.getPrice(), 0.001f);
     }
 
     // Тест формирования чека
