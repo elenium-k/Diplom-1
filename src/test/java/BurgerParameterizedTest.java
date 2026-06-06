@@ -108,12 +108,15 @@ public class BurgerParameterizedTest {
     }
 
     @Test
-    public void testBurgerPriceAndReceipt() {
+    public void burgerPriceTest() {
         //цена
         float actualPrice = burger.getPrice();
-        assertEquals(expectedPrice, actualPrice, 0.001f);
+        assertEquals(expectedPrice, actualPrice, 0.001f);}
 
-        //чек
+
+    @Test
+    public void burgerReceiptTest() {
+    //чек
         String receipt = burger.getReceipt();
 
         for (String expectedLine : expectedLines) {
